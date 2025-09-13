@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLOOPLAY - Free Movie Streaming</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav">
+                <div class="logo">
+                    <h1>GLOOPLAY</h1>
+                </div>
+                <nav class="nav-links">
+                    <a href="#" class="active">Home</a>
+                    <a href="#movies">Movies</a>
+                    <a href="#genres">Genres</a>
+                    <a href="#about">About</a>
+                </nav>
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search movies...">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Welcome to GLOOPLAY</h2>
+            <p>Stream classic movies and public domain content for free</p>
+            <button class="cta-button" onclick="scrollToMovies()">
+                <i class="fas fa-play"></i> Start Watching
+            </button>
+        </div>
+        <div class="hero-background"></div>
+    </section>
+
+    <!-- Movies Section -->
+    <section class="movies-section" id="movies">
+        <div class="container">
+            <h2>Featured Movies</h2>
+            
+            <!-- Genre Filter -->
+            <div class="filter-container">
+                <button class="filter-btn active" data-genre="all">All</button>
+                <button class="filter-btn" data-genre="drama">Drama</button>
+                <button class="filter-btn" data-genre="comedy">Comedy</button>
+                <button class="filter-btn" data-genre="action">Action</button>
+                <button class="filter-btn" data-genre="horror">Horror</button>
+                <button class="filter-btn" data-genre="sci-fi">Sci-Fi</button>
+            </div>
+
+            <!-- Movies Grid -->
+            <div class="movies-grid" id="moviesGrid">
+                <!-- Movies will be populated by JavaScript -->
+            </div>
+
+            <div class="loading" id="loading">
+                <i class="fas fa-spinner fa-spin"></i> Loading movies...
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Player Modal -->
+    <div class="modal" id="videoModal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <div class="video-container">
+                <video id="videoPlayer" controls>
+                    <source src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="movie-info">
+                <h3 id="movieTitle"></h3>
+                <p id="movieDescription"></p>
+                <div class="movie-meta">
+                    <span id="movieYear"></span>
+                    <span id="movieGenre"></span>
+                    <span id="movieRating"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>GlooPlay</h3>
+                    <p>Free streaming of classic and public domain movies</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal Notice</h4>
+                    <p>All content is sourced from public domain archives and legal sources</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Built with ❤️ for movie lovers</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 GlooPlay. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
